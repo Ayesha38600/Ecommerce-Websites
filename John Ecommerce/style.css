@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    
+
+}
+body{
+    font-family: 'Raleway', sans-serif;
+}
+.main{
+    background: url("images/banner-3.png");
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.mtxt h1{
+    font-family: "Current";
+    font-size: 60px;
+}
+nav img{
+    width: 120px;
+    height: 30px;
+    /* object-fit: cover; */
+}
+ul{
+    display: flex;
+    gap: 40px;
+
+}
+p{
+    color: red;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+li{
+ list-style: none;   
+ font-weight: 800;
+}
+
+.mtxt{
+    margin-top: -500px;
+    margin-left: 160px;
+}
+button{
+    background: transparent;
+    border: 2px solid black;
+    width: 150px;
+    height: 50px;
+    margin-top: 11px;
+
+}
+h4{
+    font-style: italic;
+}
+.trends{
+    margin-top: 310px;
+}
+.head{
+    text-align: center;
+
+}
+span{
+    color: red;
+}
+.crd{
+    display: flex;
+    justify-content: center;  gap: 20px;
+    transition: width 2s, height 2s, transform 2s;
+    
+}
+.card{
+    margin-top: 40px;    transition: width 2s, height 2s, transform 2s;
+  
+}
+.card img{
+    width: 340px;
+    height: 430px;
+    object-fit: cover;
+}
+.smalltxt{
+    padding: 11px;        transition: width 2s, height 2s, transform 2s;
+}
+i{
+    color: rgb(143, 101, 24);
+}
+.small{
+    transition: width 2s, height 2s, transform 2s;
+}
+.small img:hover{
+/* width: 320px;
+
+height: 410px;
+margin-top: 10px; */
+transform: scale(1.03);
+}
+
+/*  */
+.riview{
+    margin-top: 60px;
+    background-color: aliceblue;
+    justify-content: center;
+    text-align: center;
+    padding: 70px;
+    color: black;
+}
+.riview img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.riview h1{
+    font-family: "Current";
+}
+.riview p{
+    color: black;
+    text-transform: lowercase;
+    margin-top: 13px;
+}
+.riview h2{
+    margin-top: 13px;
+}
+
+/*  */
+.update{
+    margin-top: 60px;
+}
+.cerd{
+    margin-top: 60px;
+    display: flex;
+    justify-content:center ;
+  
+}
+.cerd img{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-left: 5%;
+}
+.cerd p{
+    color: black;
+    text-transform: lowercase;
+}
+.smal{
+    text-align: center;
+    padding: 20px;
+    line-height: 29px;
+}
+.footer{
+    margin-top: 70px;
+    background-color: black;
+    color: white;
+    text-align: center;
+   
+    padding: 30px;
+}
+.footer h2{
+    font-size: 18px;
+}
