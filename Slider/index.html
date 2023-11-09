@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <title>Background Image Slider</title>
+  <style>
+ body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slider-container {
+  display: flex;
+  height: 100%;
+  width: 300%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 2em;
+}
+
+.slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+
+#slide1 {
+  background-image: url('https://images.unsplash.com/photo-1470259078422-826894b933aa?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fG1vZGVybiUyMGdpcmx8ZW58MHwwfDB8fHww');  
+}
+
+#slide2 {
+  background-image: url('https://images.unsplash.com/photo-1618488935766-71ee040f37df?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG1vZGVybiUyMGdpcmx8ZW58MHwwfDB8fHww'); 
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-attachment: fixed;
+}
+
+#slide3 {
+  background-image: url('https://plus.unsplash.com/premium_photo-1663045410619-c8d10cfbaa52?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fG1vZGVybiUyMGdpcmx8ZW58MHwwfDB8fHww'); }
+.slide h1{
+    color: rgb(255, 255, 255);
+    margin-left: -1200px;
+    z-index: 999;
+    object-fit: cover;
+    font-family: "Kalyntha";
+    font-size: 160px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="slider-container">
+    <div class="slide" id="slide1">
+      <h1>Slide 1</h1>
+    </div>
+    <div class="slide" id="slide2">
+      <h1>Slide 2</h1>
+    </div>
+    <div class="slide" id="slide3">
+      <h1>Slide 3</h1>
+    </div>
+  </div>
+
+  <script>
+    let currentSlide = 1;
+
+document.addEventListener("DOMContentLoaded", function () {
+  showSlide(currentSlide);
+});
+
+function showSlide(slideNumber) {
+  const sliderContainer = document.querySelector(".slider-container");
+  const slideWidth = document.querySelector(".slide").offsetWidth;
+
+  sliderContainer.style.transform = `translateX(${-slideWidth * (slideNumber - 1)}px)`;
+}
+
+function nextSlide() {
+  if (currentSlide < 3) {
+    currentSlide++;
+  } else {
+    currentSlide = 1;
+  }
+  showSlide(currentSlide);
+}
+
+function prevSlide() {
+  if (currentSlide > 1) {
+    currentSlide--;
+  } else {
+    currentSlide = 3;
+  }
+  showSlide(currentSlide);
+}
+
+// Auto slide change
+setInterval(nextSlide, 3000); // Change slide every 3 seconds
+
+  </script>
+</body>
+</html>
